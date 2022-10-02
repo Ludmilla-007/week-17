@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn1{
+background-color:antiquewhite;
+        }
+        .output{
+            background: burlywood;
+            border: yellow;
+            width: 20%;
+            height: 30%;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <label for="tbuser">Username</label>
+    <input type="text" id="tbuser" placeholder="Enter Username" maxlength="30">
+    <input type="button" id="btn1" value="Click Me">
+    <input class="text" id="output1" placeholder="Output"></input>
+    <script>
+        const txt1 = document.getElementById('tbuser');
+        const btn1= document.getElementById('btn1');
+        const out1 =document.getElementById('output1');
+        function fun1(){
+            out1.innerHTML=txt1.value;
+            btn1.addEventListener('click',fun1)
+        }
+    </script>
+</body>
+</html>

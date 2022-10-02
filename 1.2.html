@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" class="input-in" value="" id="tel">
+   <button>Нажми меня</button>
+   <div class="out"></div>
+
+    <script>
+     let inputIn = document.querySelector('.input-in');  //input 
+    let button = document.querySelector('button'); //button
+    let div = document.querySelector('.out');
+    let tel = document.querySelector('#tel');
+let reg = /[A-Za-zA-Яа-яЁё]/g;
+    button.onclick = function()
+    {
+       this.value=this.value.replace(reg,'');
+        let name = inputIn.value;
+        //console.log(name);
+       
+        div.innerHTML =name;
+        inputIn.value='';
+    }
+    
+    </script>
+</body>
+</html>
