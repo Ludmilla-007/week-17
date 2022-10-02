@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <form action="">
+      <h3>Фамилия</h3>
+      <input type='text' id='surname'>
+      <h3>Имя</h3>
+      <input type='text' id='name'>
+      <h3>Отчество</h3>
+      <input type='text' id='middle'><br>
+      <br>
+      <input type="text" class="input-in" value="">
+   <button>Go</button>
+   <div class="out"></div>
+
+    </form>
+  </div>
+<script>
+    let inputIn = document.querySelector('.input-in');  //input 
+    let button = document.querySelector('button'); //button
+    let div = document.querySelector('.out');
+    document.querySelector('.input-in').addEventListener('input-in', function() {
+  this.value = this.value.replace(/[^А-Яа-яЁё -]/g, '');
+})
+    button.onclick = function()
+    {
+      
+      //  console.log(inputIn.value);//value это то, что введено в input
+        let b = inputIn.value;
+        //console.log(b);
+        div.innerHTML =b;
+       // inputIn.value='';
+    }
+   
+</script>
+ 
+</body>
+
+</html>

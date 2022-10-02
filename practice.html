@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let test ="We are company !\"Google\"";
+        console.log(test);
+        let position =test.indexOf("Google");
+        console.log(position);
+        let sliced =test.slice(position,-1);
+        console.log(sliced);
+        let apple = test.replace(/google/i,"Apple");
+        console.log(apple);
+        let message ="Hello, username";
+        let name = "Lu";
+        let result = message.replace("username",name);
+        console.log(result);
+        let big = name.toUpperCase();
+        console.log(big);
+        let small = name.toLowerCase();
+        console.log(small);
+        console.log(name[0]);
+        console.log(name[name.length-1]);
+        let txt ="Berlin, Hamburg, Koblenz";
+        let cities = txt.split(",");
+        console.log(cities.join(";"));
+        let str = "      Leipzig";
+        let clean =str.trim(str);
+        console.log(clean);
+    </script>
+</body>
+</html>

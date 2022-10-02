@@ -8,8 +8,31 @@
 </head>
 <body>
     <script>
-      let m =  Math.round(Math.random()*100);
-      console.log(m); 
+     var random_start = -10; // От какого генерировать
+var random_end = 10; // До какого генерировать
+
+allСycles = 10;
+
+let array= []
+
+for(i=random_start;i<=random_end;i++){
+   array.push(i)
+}
+
+for(countCycles=1;countCycles<=allСycles;countCycles++){
+    console.log(array.splice(Math.random()*array.length,1)[0])
+}
+    
+ let min = array[-10];
+ for (let i=0;i<array.length;i++){
+    if(min>array[i]){
+        min=array[i]
+       
+    }
+    
+ }
+ console.log(min);   
+
     </script>
 </body>
 </html>
