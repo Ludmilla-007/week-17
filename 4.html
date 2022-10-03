@@ -12,20 +12,19 @@
   <input type="number" id="Chislo" value="10">
   <button onclick="func();">Generate</button>
   <input type="checkbox" id="MinElem">
-  <input type="checkbox" id="MaxElem">
   <input id="IshMas">
 
   <script>
     function func() {
-      var arr = [];
+      let arr = [];
       document.getElementById("IshMas").value = "";
-      var min = -10;
-      var max = 10;
-      var one = document.getElementById("Chislo").valueAsNumber;
+      let min = -10;
+      let max = 10;
+      let one = document.getElementById("Chislo").valueAsNumber;
 
 
 
-      for (var i = 0, rand; i < one; i++) {
+      for (let i = 0, rand; i < one; i++) {
         rand = Math.round(min + Math.random() * (max - min + 1));
         arr[i] = rand;
       }
@@ -34,15 +33,15 @@
 
       document.getElementById("IshMas").value = arr.join(",");
       document.getElementById("MinElem").onclick = Cl.bind(null, arr);
-      document.getElementById("MaxElem").onclick = Max.bind(null, arr);
+      
 
 
     }
 
     function Cl(arr) {
       if (document.getElementById("MinElem").checked) {
-        var MinEl = Infinity;
-        for (var i = 0, len = arr.length; i < len; i++) {
+        let MinEl = Infinity;
+        for (let i = 0, len = arr.length; i < len; i++) {
           if (MinEl > arr[i])
             MinEl = arr[i];
 
@@ -54,21 +53,7 @@
 
     }
 
-    function MyMax(arr){
-      
-    var al = arr.length;
-    MaxEl = myarr[al-1];
-    while (al--){
-        if(arr[al] > MaxEl){
-          MaxEl = arr[al]
-        }
-    }
-            return MaxEl;
-};
-
-        alert(MaxEl);
-
-    
+  
 
     
   </script>
